@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Praktikum Web 2023</title>
+	</head>
+	<body>
+		<form action="">
+			<label for="range">Range 1 - 10</label>
+			<input type="range" id="range" min="1" max="10" />
+			<p>Value : <span id="value"></span></p>
+		</form>
+		<script>
+			const range = document.querySelector("#range");
+			const value = document.querySelector("#value");
+			value.textContent = range.value;
+			range.addEventListener("input", () => {
+				value.textContent = range.value;
+			});
+		</script>
+	</body>
+</html>
